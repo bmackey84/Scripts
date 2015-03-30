@@ -1,0 +1,49 @@
+G:
+CD "G:\Microsoft\Halo Online\Halo" (THIS IS WHERE MY WORKING DIRECTORY IS)
+@ECHO off
+CLS
+:start
+ECHO.
+ECHO 1. guardian.map
+ECHO 2. mainmenu.map
+ECHO 3. riverworld.map
+ECHO 4. s3d_avalanche.map
+ECHO 5. s3d_edge.map
+ECHO 6. s3d_reactor.map
+ECHO 7. s3d_turf.map
+set /p choice=Type the number of the map you wish to load.
+rem if not '%choice%'=='' set choice=%choice:~0;1%
+if '%choice%'=='' ECHO "%choice%" You dumbfuck, that's not a map number. Try again.
+if '%choice%'=='1' goto :guardian.map
+if '%choice%'=='2' goto :mainmenu.map
+if '%choice%'=='3' goto :riverworld.map
+if '%choice%'=='4' goto :s3d_avalanche.map
+if '%choice%'=='5' goto :s3d_edge.map
+if '%choice%'=='6' goto :s3d_reactor.map
+if '%choice%'=='7' goto :s3d_turf.map
+ECHO.
+goto start
+:guardian.map
+HaloFreeLoader.exe guardian.map
+goto end
+:mainmenu.map
+HaloFreeLoader.exe mainmenu.map
+goto end
+:riverworld.map
+HaloFreeLoader.exe riverworld.map
+goto end
+:riverworld.map
+HaloFreeLoader.exe s3d_avalanche.map
+goto end
+:riverworld.map
+HaloFreeLoader.exe s3d_edge.map
+goto end
+:riverworld.map
+HaloFreeLoader.exe s3d_reactor.map
+goto end
+:riverworld.map
+HaloFreeLoader.exe s3d_turf.map
+goto end
+:end
+pause
+exit
